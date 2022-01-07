@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:tbl_Inspection_Wise_Defects" ZOrder="7" X="403" Y="480" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:tbl_Inspection_H" ZOrder="6" X="846" Y="103" Height="533" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="465" />
     <Shape ID="DesignTable:tbl_Inspection_D" ZOrder="5" X="1206" Y="257" Height="267" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
-    <Shape ID="DesignTable:view_MS_PONO" ZOrder="4" X="894" Y="721" Height="305" Width="289" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:view_MS_PONO" ZOrder="4" X="1168" Y="662" Height="305" Width="289" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:tbl_Inspection_Type_tbl_Inspection_Process" ZOrder="3" LineWidth="11">
