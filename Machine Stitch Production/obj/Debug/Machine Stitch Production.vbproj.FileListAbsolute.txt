@@ -10,3 +10,15 @@ E:\FS Prod\Machine Stitch Production\Machine Stitch Production\obj\Debug\Machine
 E:\FS Prod\Machine Stitch Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.exe
 E:\FS Prod\Machine Stitch Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.xml
 E:\FS Prod\Machine Stitch Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.pdb
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine_Stitch_Production.Form1.resources
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine_Stitch_Production.Resources.resources
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.vbproj.GenerateResource.cache
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.vbproj.CoreCompileInputs.cache
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.exe
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.xml
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.pdb
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.exe.config
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.exe
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.pdb
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.xml
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.vbprojAssemblyReference.cache

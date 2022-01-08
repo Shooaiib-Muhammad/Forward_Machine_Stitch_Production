@@ -57,6 +57,21 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Machine_Stitch_Production.MSDS.tbl_PC_AMB_LineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.view_MS_batched_QuantityDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.maxTIDDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Machine_Stitch_Production.MSDS.tbl_Inspection_TypeRow">
 <summary>
 Represents strongly named DataRow class.
@@ -83,6 +98,21 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Machine_Stitch_Production.MSDS.view_MS_PONORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.tbl_PC_AMB_LineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.view_MS_batched_QuantityRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.maxTIDRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -117,6 +147,21 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Machine_Stitch_Production.MSDS.tbl_PC_AMB_LineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.view_MS_batched_QuantityRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDS.maxTIDRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Machine_Stitch_Production.MSDSTableAdapters.tbl_Inspection_TypeTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -143,6 +188,21 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Machine_Stitch_Production.MSDSTableAdapters.view_MS_PONOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDSTableAdapters.tbl_PC_AMB_LineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDSTableAdapters.view_MS_batched_QuantityTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Machine_Stitch_Production.MSDSTableAdapters.maxTIDTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
