@@ -22,3 +22,7 @@ C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine 
 C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.pdb
 C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.xml
 C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.vbprojAssemblyReference.cache
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.exe.manifest
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\bin\Debug\Machine Stitch Production.application
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.exe.manifest
+C:\Users\ITS-4\Desktop\Github working\Forward_Machine_Stitch_Production\Machine Stitch Production\obj\Debug\Machine Stitch Production.application

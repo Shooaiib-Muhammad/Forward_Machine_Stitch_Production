@@ -35,6 +35,9 @@ Partial Class Form1
         Dim LineNameLabel As System.Windows.Forms.Label
         Dim Label15 As System.Windows.Forms.Label
         Dim Label24 As System.Windows.Forms.Label
+        Dim Label28 As System.Windows.Forms.Label
+        Dim Label30 As System.Windows.Forms.Label
+        Dim Label32 As System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label()
         Me.MSDS = New Machine_Stitch_Production.MSDS()
         Me.Tbl_Inspection_TypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -82,6 +85,11 @@ Partial Class Form1
         Me.Tbl_PC_AMB_LineTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.tbl_PC_AMB_LineTableAdapter()
         Me.View_MS_batched_QuantityTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.view_MS_batched_QuantityTableAdapter()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -93,12 +101,13 @@ Partial Class Form1
         Me.MaxTIDBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MaxTIDTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.maxTIDTableAdapter()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.View_inspection_QuantityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.View_inspection_QuantityTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.view_inspection_QuantityTableAdapter()
         InspectionNameLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -111,6 +120,9 @@ Partial Class Form1
         LineNameLabel = New System.Windows.Forms.Label()
         Label15 = New System.Windows.Forms.Label()
         Label24 = New System.Windows.Forms.Label()
+        Label28 = New System.Windows.Forms.Label()
+        Label30 = New System.Windows.Forms.Label()
+        Label32 = New System.Windows.Forms.Label()
         CType(Me.MSDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Inspection_TypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Inspection_ProcessBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,10 +135,12 @@ Partial Class Form1
         Me.GroupBox1.SuspendLayout()
         CType(Me.Tbl_Inspection_HBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.Tbl_Inspection_DBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaxTIDBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.View_inspection_QuantityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'InspectionNameLabel
@@ -248,6 +262,33 @@ Partial Class Form1
         Label24.TabIndex = 121
         Label24.Text = "Balance :"
         '
+        'Label28
+        '
+        Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label28.Location = New System.Drawing.Point(-1, 23)
+        Label28.Name = "Label28"
+        Label28.Size = New System.Drawing.Size(151, 31)
+        Label28.TabIndex = 122
+        Label28.Text = "Total Checked :"
+        '
+        'Label30
+        '
+        Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label30.Location = New System.Drawing.Point(-1, 66)
+        Label30.Name = "Label30"
+        Label30.Size = New System.Drawing.Size(151, 31)
+        Label30.TabIndex = 124
+        Label30.Text = "Total Pass :"
+        '
+        'Label32
+        '
+        Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label32.Location = New System.Drawing.Point(5, 114)
+        Label32.Name = "Label32"
+        Label32.Size = New System.Drawing.Size(151, 31)
+        Label32.TabIndex = 126
+        Label32.Text = "Total Fail :"
+        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Teal
@@ -256,7 +297,7 @@ Partial Class Form1
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1382, 40)
+        Me.Label5.Size = New System.Drawing.Size(1629, 40)
         Me.Label5.TabIndex = 84
         Me.Label5.Text = "Machine Stitch Ball Production "
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -629,7 +670,7 @@ Partial Class Form1
         Me.Label17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "ArtID", True))
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(1564, 659)
+        Me.Label17.Location = New System.Drawing.Point(1436, 648)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(181, 33)
         Me.Label17.TabIndex = 109
@@ -716,6 +757,59 @@ Partial Class Form1
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1339, 293)
         Me.Panel3.TabIndex = 118
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(542, 85)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(218, 31)
+        Me.Label26.TabIndex = 123
+        Me.Label26.Text = "Defets Quantity :"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(766, 78)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(142, 38)
+        Me.TextBox2.TabIndex = 122
+        Me.TextBox2.Visible = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.RadioButton5)
+        Me.GroupBox3.Controls.Add(Me.RadioButton6)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(256, 64)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(227, 79)
+        Me.GroupBox3.TabIndex = 118
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Defect Quantity :"
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(120, 29)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(95, 29)
+        Me.RadioButton5.TabIndex = 116
+        Me.RadioButton5.Text = "Manual"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'RadioButton6
+        '
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Checked = True
+        Me.RadioButton6.Location = New System.Drawing.Point(13, 29)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(85, 29)
+        Me.RadioButton6.TabIndex = 114
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.Text = "Single"
+        Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -815,83 +909,90 @@ Partial Class Form1
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(1134, 43)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(217, 73)
+        Me.Button3.Size = New System.Drawing.Size(482, 73)
         Me.Button3.TabIndex = 123
         Me.Button3.Text = "Add New Inspection"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.RadioButton5)
-        Me.GroupBox3.Controls.Add(Me.RadioButton6)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(256, 64)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(227, 79)
-        Me.GroupBox3.TabIndex = 118
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Defect Quantity :"
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(120, 29)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(95, 29)
-        Me.RadioButton5.TabIndex = 116
-        Me.RadioButton5.Text = "Manual"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Checked = True
-        Me.RadioButton6.Location = New System.Drawing.Point(13, 29)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(85, 29)
-        Me.RadioButton6.TabIndex = 114
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "Single"
-        Me.RadioButton6.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(766, 78)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(142, 38)
-        Me.TextBox2.TabIndex = 122
-        Me.TextBox2.Visible = False
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(542, 85)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(218, 31)
-        Me.Label26.TabIndex = 123
-        Me.Label26.Text = "Defets Quantity :"
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(1221, 644)
+        Me.Button4.Location = New System.Drawing.Point(1357, 340)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(139, 60)
+        Me.Button4.Size = New System.Drawing.Size(259, 60)
         Me.Button4.TabIndex = 124
         Me.Button4.Text = "Exit"
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.Label31)
+        Me.Panel4.Controls.Add(Label32)
+        Me.Panel4.Controls.Add(Me.Label29)
+        Me.Panel4.Controls.Add(Label30)
+        Me.Panel4.Controls.Add(Me.Label27)
+        Me.Panel4.Controls.Add(Label28)
+        Me.Panel4.Location = New System.Drawing.Point(1357, 125)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(259, 163)
+        Me.Panel4.TabIndex = 125
+        '
+        'Label31
+        '
+        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label31.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_inspection_QuantityBindingSource, "Quantity", True))
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(148, 114)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(104, 33)
+        Me.Label31.TabIndex = 127
+        Me.Label31.Text = "Label31"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label29
+        '
+        Me.Label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label29.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_inspection_QuantityBindingSource, "Pass", True))
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(148, 66)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(104, 33)
+        Me.Label29.TabIndex = 125
+        Me.Label29.Text = "Label29"
+        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label27
+        '
+        Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label27.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_inspection_QuantityBindingSource, "BatchQty", True))
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(148, 23)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(104, 33)
+        Me.Label27.TabIndex = 123
+        Me.Label27.Text = "Label27"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'View_inspection_QuantityBindingSource
+        '
+        Me.View_inspection_QuantityBindingSource.DataMember = "view_inspection_Quantity"
+        Me.View_inspection_QuantityBindingSource.DataSource = Me.MSDS
+        '
+        'View_inspection_QuantityTableAdapter
+        '
+        Me.View_inspection_QuantityTableAdapter.ClearBeforeFill = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1382, 722)
+        Me.ClientSize = New System.Drawing.Size(1629, 717)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label25)
@@ -924,12 +1025,14 @@ Partial Class Form1
         CType(Me.Tbl_Inspection_HBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.Tbl_Inspection_DBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MaxTIDBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.View_inspection_QuantityBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -998,4 +1101,10 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents View_inspection_QuantityBindingSource As BindingSource
+    Friend WithEvents View_inspection_QuantityTableAdapter As MSDSTableAdapters.view_inspection_QuantityTableAdapter
 End Class

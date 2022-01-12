@@ -32,6 +32,7 @@
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
@@ -106,11 +107,17 @@
         Catch ex As Exception
 
         End Try
+        Try
+            Me.View_inspection_QuantityTableAdapter.Fill(Me.MSDS.view_inspection_Quantity, CType(Label14.Text, Int64), CType(Label21.Text, Int64), CType(Label20.Text, Int64))
+        Catch ex As System.Exception
+
+        End Try
     End Sub
 
 
     Private Sub View_MS_PONOBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles View_MS_PONOBindingSource.PositionChanged
         loadData()
+        loadQuantity()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -139,13 +146,15 @@
             Else
                 If RadioButton6.Checked = True Then
                     Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ComboBox2.SelectedValue), 1, Parameters_Setting, Sealing_Sample, Metal_Detection, Now.Date, Nothing)
-                    MsgBox("Data Saved")
+                    'MsgBox("Data Saved")
+                    loadQuantity()
                 ElseIf RadioButton5.Checked = True Then
                     If TextBox2.Text = "" Then
                         MsgBox("Enter Defects Quantity")
                     Else
                         Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ComboBox2.SelectedValue), Val(TextBox2.Text), Parameters_Setting, Sealing_Sample, Metal_Detection, Now.Date, Nothing)
-                        MsgBox("Data Saved")
+                        'MsgBox("Data Saved")
+                        loadQuantity()
                     End If
                 End If
 
@@ -160,7 +169,13 @@
 
 
     End Sub
+    Private Sub loadQuantity()
+        Try
+            Me.View_inspection_QuantityTableAdapter.Fill(Me.MSDS.view_inspection_Quantity, CType(Label14.Text, Int64), CType(Label21.Text, Int64), CType(Label20.Text, Int64))
+        Catch ex As System.Exception
 
+        End Try
+    End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Tbl_Inspection_HBindingSource.AddNew()
         TextBox1.Text = ""
@@ -192,4 +207,6 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
     End Sub
+
+
 End Class
