@@ -16,7 +16,11 @@
         'TODO: This line of code loads data into the 'MSDS.tbl_PC_AMB_Line' table. You can move, or remove it, as needed.
         Me.Tbl_PC_AMB_LineTableAdapter.Fill(Me.MSDS.tbl_PC_AMB_Line)
         'TODO: This line of code loads data into the 'MSDS.tbl_Inspection_H' table. You can move, or remove it, as needed.
-        Me.Tbl_Inspection_HTableAdapter.Fill(Me.MSDS.tbl_Inspection_H)
+        Try
+            Me.Tbl_Inspection_HTableAdapter.Fill(Me.MSDS.tbl_Inspection_H)
+        Catch ex As Exception
+
+        End Try
         'TODO: This line of code loads data into the 'MSDS.tbl_Inspection_Wise_Defects' table. You can move, or remove it, as needed.
         Me.Tbl_Inspection_Wise_DefectsTableAdapter.Fill(Me.MSDS.tbl_Inspection_Wise_Defects)
         'TODO: This line of code loads data into the 'MSDS.tbl_Inspection_Process' table. You can move, or remove it, as needed.
@@ -82,7 +86,7 @@
                 MsgBox("Batch Quantity  must be less then Order")
             Else
                 Try
-                    Tbl_Inspection_HTableAdapter.Insert(InspectionNameComboBox.SelectedValue, CType(Shift, String), Label7.Text, TextBox1.Text, CType(LineNameComboBox.SelectedValue, Int64), CType(Label14.Text, Int64), CType(Label21.Text, Int64), CType(Label20.Text, Int64), CType(Label19.Text, Int64), CType(Label18.Text, Int64), CType(Label17.Text, Int64), Label12.Text, Label16.Text, Now.Date, Nothing)
+                    Tbl_Inspection_HTableAdapter.Insert(InspectionNameComboBox.SelectedValue, CType(Shift, String), Label7.Text, TextBox1.Text, CType(LineNameComboBox.SelectedValue, Int64), CType(Label14.Text, Int64), CType(Label21.Text, Int64), CType(Label20.Text, Int64), CType(Label19.Text, Int64), CType(Label18.Text, Int64), CType(Label17.Text, Int64), CType(Label12.Text, String), CType(Label16.Text, String), Nothing, Nothing, CType(Label9.Text, String))
                     MsgBox("Head Data Saved")
                     balance()
                     loadData()
@@ -145,14 +149,14 @@
                 MsgBox("please Enter Head Information")
             Else
                 If RadioButton6.Checked = True Then
-                    Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ComboBox2.SelectedValue), 1, Parameters_Setting, Sealing_Sample, Metal_Detection, Now.Date, Nothing)
+                    Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ListBox1.SelectedValue), 1, Parameters_Setting, Sealing_Sample, Metal_Detection, Nothing, Nothing, Label9.Text)
                     'MsgBox("Data Saved")
                     loadQuantity()
                 ElseIf RadioButton5.Checked = True Then
                     If TextBox2.Text = "" Then
                         MsgBox("Enter Defects Quantity")
                     Else
-                        Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ComboBox2.SelectedValue), Val(TextBox2.Text), Parameters_Setting, Sealing_Sample, Metal_Detection, Now.Date, Nothing)
+                        Tbl_Inspection_DTableAdapter.Insert(Val(Label25.Text), Val(ComboBox1.SelectedValue), Val(ListBox1.SelectedValue), Val(TextBox2.Text), Parameters_Setting, Sealing_Sample, Metal_Detection, Nothing, Nothing, Label9.Text)
                         'MsgBox("Data Saved")
                         loadQuantity()
                     End If

@@ -48,7 +48,6 @@ Partial Class Form1
         Me.InspectionNameComboBox = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Tbl_Inspection_ProcessBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Tbl_Inspection_Wise_DefectsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.View_MS_PONOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.View_MS_PONOTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.view_MS_PONOTableAdapter()
@@ -104,10 +103,11 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.View_inspection_QuantityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.View_inspection_QuantityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.View_inspection_QuantityTableAdapter = New Machine_Stitch_Production.MSDSTableAdapters.view_inspection_QuantityTableAdapter()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         InspectionNameLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -297,7 +297,7 @@ Partial Class Form1
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1629, 40)
+        Me.Label5.Size = New System.Drawing.Size(1696, 40)
         Me.Label5.TabIndex = 84
         Me.Label5.Text = "Machine Stitch Ball Production "
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -367,20 +367,6 @@ Partial Class Form1
         '
         Me.Tbl_Inspection_ProcessBindingSource.DataMember = "tbl_Inspection_Type_tbl_Inspection_Process"
         Me.Tbl_Inspection_ProcessBindingSource.DataSource = Me.Tbl_Inspection_TypeBindingSource
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox2.DataSource = Me.Tbl_Inspection_Wise_DefectsBindingSource
-        Me.ComboBox2.DisplayMember = "DefectName"
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(760, 19)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(541, 39)
-        Me.ComboBox2.TabIndex = 90
-        Me.ComboBox2.ValueMember = "DefectID"
         '
         'Tbl_Inspection_Wise_DefectsBindingSource
         '
@@ -744,6 +730,7 @@ Partial Class Form1
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.ListBox1)
         Me.Panel3.Controls.Add(Me.Label26)
         Me.Panel3.Controls.Add(Me.TextBox2)
         Me.Panel3.Controls.Add(Me.GroupBox3)
@@ -751,18 +738,17 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.GroupBox2)
         Me.Panel3.Controls.Add(Me.ComboBox1)
         Me.Panel3.Controls.Add(Label1)
-        Me.Panel3.Controls.Add(Me.ComboBox2)
         Me.Panel3.Controls.Add(Label2)
         Me.Panel3.Location = New System.Drawing.Point(12, 340)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1339, 293)
+        Me.Panel3.Size = New System.Drawing.Size(1604, 474)
         Me.Panel3.TabIndex = 118
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(542, 85)
+        Me.Label26.Location = New System.Drawing.Point(37, 158)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(218, 31)
         Me.Label26.TabIndex = 123
@@ -771,7 +757,7 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(766, 78)
+        Me.TextBox2.Location = New System.Drawing.Point(261, 151)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(142, 38)
         Me.TextBox2.TabIndex = 122
@@ -816,7 +802,7 @@ Partial Class Form1
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(1020, 207)
+        Me.Button2.Location = New System.Drawing.Point(453, 247)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(297, 60)
         Me.Button2.TabIndex = 122
@@ -829,9 +815,9 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(1020, 64)
+        Me.GroupBox2.Location = New System.Drawing.Point(489, 74)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(281, 137)
+        Me.GroupBox2.Size = New System.Drawing.Size(271, 137)
         Me.GroupBox2.TabIndex = 118
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Validations and Checklists :"
@@ -919,9 +905,9 @@ Partial Class Form1
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(1357, 340)
+        Me.Button4.Location = New System.Drawing.Point(1357, 288)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(259, 60)
+        Me.Button4.Size = New System.Drawing.Size(259, 46)
         Me.Button4.TabIndex = 124
         Me.Button4.Text = "Exit"
         Me.Button4.UseVisualStyleBackColor = False
@@ -952,6 +938,11 @@ Partial Class Form1
         Me.Label31.Text = "Label31"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'View_inspection_QuantityBindingSource
+        '
+        Me.View_inspection_QuantityBindingSource.DataMember = "view_inspection_Quantity"
+        Me.View_inspection_QuantityBindingSource.DataSource = Me.MSDS
+        '
         'Label29
         '
         Me.Label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -976,21 +967,29 @@ Partial Class Form1
         Me.Label27.Text = "Label27"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'View_inspection_QuantityBindingSource
-        '
-        Me.View_inspection_QuantityBindingSource.DataMember = "view_inspection_Quantity"
-        Me.View_inspection_QuantityBindingSource.DataSource = Me.MSDS
-        '
         'View_inspection_QuantityTableAdapter
         '
         Me.View_inspection_QuantityTableAdapter.ClearBeforeFill = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.DataSource = Me.Tbl_Inspection_Wise_DefectsBindingSource
+        Me.ListBox1.DisplayMember = "DefectName"
+        Me.ListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 31
+        Me.ListBox1.Location = New System.Drawing.Point(771, 19)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(813, 438)
+        Me.ListBox1.TabIndex = 125
+        Me.ListBox1.ValueMember = "DefectID"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1629, 717)
+        Me.ClientSize = New System.Drawing.Size(1696, 818)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Button4)
@@ -1044,7 +1043,6 @@ Partial Class Form1
     Friend WithEvents TableAdapterManager As MSDSTableAdapters.TableAdapterManager
     Friend WithEvents InspectionNameComboBox As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Tbl_Inspection_ProcessTableAdapter As MSDSTableAdapters.tbl_Inspection_ProcessTableAdapter
     Friend WithEvents Tbl_Inspection_ProcessBindingSource As BindingSource
     Friend WithEvents Tbl_Inspection_Wise_DefectsTableAdapter As MSDSTableAdapters.tbl_Inspection_Wise_DefectsTableAdapter
@@ -1107,4 +1105,5 @@ Partial Class Form1
     Friend WithEvents Label29 As Label
     Friend WithEvents View_inspection_QuantityBindingSource As BindingSource
     Friend WithEvents View_inspection_QuantityTableAdapter As MSDSTableAdapters.view_inspection_QuantityTableAdapter
+    Friend WithEvents ListBox1 As ListBox
 End Class

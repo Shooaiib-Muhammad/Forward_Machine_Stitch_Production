@@ -1563,6 +1563,10 @@ Partial Public Class MSDS
         
         Private columnipaddress As Global.System.Data.DataColumn
         
+        Private columnArticleID1 As Global.System.Data.DataColumn
+        
+        Private columnArticleCode As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1727,6 +1731,22 @@ Partial Public Class MSDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArticleID1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArticleID1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArticleCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArticleCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1763,9 +1783,26 @@ Partial Public Class MSDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_Inspection_HRow(ByVal InspectionID As Integer, ByVal Shift As String, ByVal OrderQty As Decimal, ByVal BatchQty As Decimal, ByVal LineID As Integer, ByVal PO As Integer, ByVal POM As Integer, ByVal POD As Integer, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArticleID As Integer, ByVal ArtSize As String, ByVal Supplier As String, ByVal EntryDate As String, ByVal ipaddress As String) As tbl_Inspection_HRow
+        Public Overloads Function Addtbl_Inspection_HRow( _
+                    ByVal InspectionID As Integer,  _
+                    ByVal Shift As String,  _
+                    ByVal OrderQty As Decimal,  _
+                    ByVal BatchQty As Decimal,  _
+                    ByVal LineID As Integer,  _
+                    ByVal PO As Integer,  _
+                    ByVal POM As Integer,  _
+                    ByVal POD As Integer,  _
+                    ByVal ClientID As Integer,  _
+                    ByVal ModelID As Integer,  _
+                    ByVal ArticleID As Integer,  _
+                    ByVal ArtSize As String,  _
+                    ByVal Supplier As String,  _
+                    ByVal EntryDate As String,  _
+                    ByVal ipaddress As String,  _
+                    ByVal ArticleID1 As String,  _
+                    ByVal ArticleCode As String) As tbl_Inspection_HRow
             Dim rowtbl_Inspection_HRow As tbl_Inspection_HRow = CType(Me.NewRow,tbl_Inspection_HRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, InspectionID, Shift, OrderQty, BatchQty, LineID, PO, POM, POD, ClientID, ModelID, ArticleID, ArtSize, Supplier, EntryDate, ipaddress}
+            Dim columnValuesArray() As Object = New Object() {Nothing, InspectionID, Shift, OrderQty, BatchQty, LineID, PO, POM, POD, ClientID, ModelID, ArticleID, ArtSize, Supplier, EntryDate, ipaddress, ArticleID1, ArticleCode}
             rowtbl_Inspection_HRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Inspection_HRow)
             Return rowtbl_Inspection_HRow
@@ -1810,6 +1847,8 @@ Partial Public Class MSDS
             Me.columnSupplier = MyBase.Columns("Supplier")
             Me.columnEntryDate = MyBase.Columns("EntryDate")
             Me.columnipaddress = MyBase.Columns("ipaddress")
+            Me.columnArticleID1 = MyBase.Columns("ArticleID1")
+            Me.columnArticleCode = MyBase.Columns("ArticleCode")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1847,6 +1886,10 @@ Partial Public Class MSDS
             MyBase.Columns.Add(Me.columnEntryDate)
             Me.columnipaddress = New Global.System.Data.DataColumn("ipaddress", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnipaddress)
+            Me.columnArticleID1 = New Global.System.Data.DataColumn("ArticleID1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArticleID1)
+            Me.columnArticleCode = New Global.System.Data.DataColumn("ArticleCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArticleCode)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTID}, true))
             Me.columnTID.AutoIncrement = true
             Me.columnTID.AutoIncrementSeed = -1
@@ -1859,6 +1902,9 @@ Partial Public Class MSDS
             Me.columnSupplier.MaxLength = 50
             Me.columnEntryDate.MaxLength = 10
             Me.columnipaddress.MaxLength = 150
+            Me.columnArticleID1.Caption = "ArticleID"
+            Me.columnArticleID1.MaxLength = 150
+            Me.columnArticleCode.MaxLength = 1050
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2016,6 +2062,8 @@ Partial Public Class MSDS
         
         Private columnIpaddress As Global.System.Data.DataColumn
         
+        Private columnArticleCode As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2132,6 +2180,14 @@ Partial Public Class MSDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArticleCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArticleCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2168,9 +2224,9 @@ Partial Public Class MSDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_Inspection_DRow(ByVal parenttbl_Inspection_HRowBytbl_Inspection_H_tbl_Inspection_D As tbl_Inspection_HRow, ByVal ProcessID As Integer, ByVal DefectID As Integer, ByVal Quantity As Decimal, ByVal Parameters As Boolean, ByVal Sealing_Sample As Boolean, ByVal Metal_Detection As Boolean, ByVal EntryDate As String, ByVal Ipaddress As String) As tbl_Inspection_DRow
+        Public Overloads Function Addtbl_Inspection_DRow(ByVal parenttbl_Inspection_HRowBytbl_Inspection_H_tbl_Inspection_D As tbl_Inspection_HRow, ByVal ProcessID As Integer, ByVal DefectID As Integer, ByVal Quantity As Decimal, ByVal Parameters As Boolean, ByVal Sealing_Sample As Boolean, ByVal Metal_Detection As Boolean, ByVal EntryDate As String, ByVal Ipaddress As String, ByVal ArticleCode As String) As tbl_Inspection_DRow
             Dim rowtbl_Inspection_DRow As tbl_Inspection_DRow = CType(Me.NewRow,tbl_Inspection_DRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, ProcessID, DefectID, Quantity, Parameters, Sealing_Sample, Metal_Detection, EntryDate, Ipaddress}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, ProcessID, DefectID, Quantity, Parameters, Sealing_Sample, Metal_Detection, EntryDate, Ipaddress, ArticleCode}
             If (Not (parenttbl_Inspection_HRowBytbl_Inspection_H_tbl_Inspection_D) Is Nothing) Then
                 columnValuesArray(1) = parenttbl_Inspection_HRowBytbl_Inspection_H_tbl_Inspection_D(0)
             End If
@@ -2212,6 +2268,7 @@ Partial Public Class MSDS
             Me.columnMetal_Detection = MyBase.Columns("Metal_Detection")
             Me.columnEntryDate = MyBase.Columns("EntryDate")
             Me.columnIpaddress = MyBase.Columns("Ipaddress")
+            Me.columnArticleCode = MyBase.Columns("ArticleCode")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2237,6 +2294,8 @@ Partial Public Class MSDS
             MyBase.Columns.Add(Me.columnEntryDate)
             Me.columnIpaddress = New Global.System.Data.DataColumn("Ipaddress", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIpaddress)
+            Me.columnArticleCode = New Global.System.Data.DataColumn("ArticleCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArticleCode)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnDID}, true))
             Me.columnDID.AutoIncrement = true
             Me.columnDID.AutoIncrementSeed = -1
@@ -2246,6 +2305,7 @@ Partial Public Class MSDS
             Me.columnDID.Unique = true
             Me.columnEntryDate.MaxLength = 10
             Me.columnIpaddress.MaxLength = 150
+            Me.columnArticleCode.MaxLength = 1050
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4596,6 +4656,36 @@ Partial Public Class MSDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArticleID1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Inspection_H.ArticleID1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ArticleID1' in table 'tbl_Inspection_H' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Inspection_H.ArticleID1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArticleCode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Inspection_H.ArticleCodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ArticleCode' in table 'tbl_Inspection_H' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Inspection_H.ArticleCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsInspectionIDNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Inspection_H.InspectionIDColumn)
         End Function
@@ -4776,6 +4866,30 @@ Partial Public Class MSDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsArticleID1Null() As Boolean
+            Return Me.IsNull(Me.tabletbl_Inspection_H.ArticleID1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetArticleID1Null()
+            Me(Me.tabletbl_Inspection_H.ArticleID1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsArticleCodeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Inspection_H.ArticleCodeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetArticleCodeNull()
+            Me(Me.tabletbl_Inspection_H.ArticleCodeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function Gettbl_Inspection_DRows() As tbl_Inspection_DRow()
             If (Me.Table.ChildRelations("tbl_Inspection_H_tbl_Inspection_D") Is Nothing) Then
                 Return New tbl_Inspection_DRow(-1) {}
@@ -4948,6 +5062,21 @@ Partial Public Class MSDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArticleCode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Inspection_D.ArticleCodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ArticleCode' in table 'tbl_Inspection_D' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Inspection_D.ArticleCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property tbl_Inspection_HRow() As tbl_Inspection_HRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("tbl_Inspection_H_tbl_Inspection_D")),tbl_Inspection_HRow)
@@ -5063,6 +5192,18 @@ Partial Public Class MSDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetIpaddressNull()
             Me(Me.tabletbl_Inspection_D.IpaddressColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsArticleCodeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Inspection_D.ArticleCodeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetArticleCodeNull()
+            Me(Me.tabletbl_Inspection_D.ArticleCodeColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -7343,11 +7484,12 @@ Namespace MSDSTableAdapters
             tableMapping.ColumnMappings.Add("POD", "POD")
             tableMapping.ColumnMappings.Add("ClientID", "ClientID")
             tableMapping.ColumnMappings.Add("ModelID", "ModelID")
-            tableMapping.ColumnMappings.Add("ArticleID", "ArticleID")
             tableMapping.ColumnMappings.Add("ArtSize", "ArtSize")
             tableMapping.ColumnMappings.Add("Supplier", "Supplier")
             tableMapping.ColumnMappings.Add("EntryDate", "EntryDate")
             tableMapping.ColumnMappings.Add("ipaddress", "ipaddress")
+            tableMapping.ColumnMappings.Add("ArticleID", "ArticleID1")
+            tableMapping.ColumnMappings.Add("ArticleCode", "ArticleCode")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -7361,7 +7503,8 @@ Namespace MSDSTableAdapters
                 "L) OR ([ModelID] = ?)) AND ((? = 1 AND [ArticleID] IS NULL) OR ([ArticleID] = ?)"& _ 
                 ") AND ((? = 1 AND [ArtSize] IS NULL) OR ([ArtSize] = ?)) AND ((? = 1 AND [Suppli"& _ 
                 "er] IS NULL) OR ([Supplier] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([Entr"& _ 
-                "yDate] = ?)) AND ((? = 1 AND [ipaddress] IS NULL) OR ([ipaddress] = ?)))"
+                "yDate] = ?)) AND ((? = 1 AND [ipaddress] IS NULL) OR ([ipaddress] = ?)) AND ((? "& _ 
+                "= 1 AND [ArticleCode] IS NULL) OR ([ArticleCode] = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_InspectionID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "InspectionID", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7385,7 +7528,7 @@ Namespace MSDSTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleID", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArtSize", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArtSize", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Supplier", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Supplier", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7394,12 +7537,14 @@ Namespace MSDSTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ipaddress", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleCode", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Inspection_H] ([InspectionID], [Shift], [OrderQty], [BatchQty], "& _ 
                 "[LineID], [PO], [POM], [POD], [ClientID], [ModelID], [ArticleID], [ArtSize], [Su"& _ 
-                "pplier], [EntryDate], [ipaddress]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
-                ", ?, ?)"
+                "pplier], [EntryDate], [ipaddress], [ArticleCode]) VALUES (?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("InspectionID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "InspectionID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Shift", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Shift", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -7411,27 +7556,29 @@ Namespace MSDSTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ClientID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ClientID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleID", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArtSize", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Supplier", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Supplier", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Inspection_H] SET [InspectionID] = ?, [Shift] = ?, [OrderQty] = ?, [B"& _ 
                 "atchQty] = ?, [LineID] = ?, [PO] = ?, [POM] = ?, [POD] = ?, [ClientID] = ?, [Mod"& _ 
                 "elID] = ?, [ArticleID] = ?, [ArtSize] = ?, [Supplier] = ?, [EntryDate] = ?, [ipa"& _ 
-                "ddress] = ? WHERE (([TID] = ?) AND ((? = 1 AND [InspectionID] IS NULL) OR ([Insp"& _ 
-                "ectionID] = ?)) AND ((? = 1 AND [Shift] IS NULL) OR ([Shift] = ?)) AND ((? = 1 A"& _ 
-                "ND [OrderQty] IS NULL) OR ([OrderQty] = ?)) AND ((? = 1 AND [BatchQty] IS NULL) "& _ 
-                "OR ([BatchQty] = ?)) AND ((? = 1 AND [LineID] IS NULL) OR ([LineID] = ?)) AND (("& _ 
-                "? = 1 AND [PO] IS NULL) OR ([PO] = ?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] "& _ 
-                "= ?)) AND ((? = 1 AND [POD] IS NULL) OR ([POD] = ?)) AND ((? = 1 AND [ClientID] "& _ 
-                "IS NULL) OR ([ClientID] = ?)) AND ((? = 1 AND [ModelID] IS NULL) OR ([ModelID] ="& _ 
-                " ?)) AND ((? = 1 AND [ArticleID] IS NULL) OR ([ArticleID] = ?)) AND ((? = 1 AND "& _ 
-                "[ArtSize] IS NULL) OR ([ArtSize] = ?)) AND ((? = 1 AND [Supplier] IS NULL) OR (["& _ 
-                "Supplier] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ("& _ 
-                "(? = 1 AND [ipaddress] IS NULL) OR ([ipaddress] = ?)))"
+                "ddress] = ?, [ArticleCode] = ? WHERE (([TID] = ?) AND ((? = 1 AND [InspectionID]"& _ 
+                " IS NULL) OR ([InspectionID] = ?)) AND ((? = 1 AND [Shift] IS NULL) OR ([Shift] "& _ 
+                "= ?)) AND ((? = 1 AND [OrderQty] IS NULL) OR ([OrderQty] = ?)) AND ((? = 1 AND ["& _ 
+                "BatchQty] IS NULL) OR ([BatchQty] = ?)) AND ((? = 1 AND [LineID] IS NULL) OR ([L"& _ 
+                "ineID] = ?)) AND ((? = 1 AND [PO] IS NULL) OR ([PO] = ?)) AND ((? = 1 AND [POM] "& _ 
+                "IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] IS NULL) OR ([POD] = ?)) AND ((? "& _ 
+                "= 1 AND [ClientID] IS NULL) OR ([ClientID] = ?)) AND ((? = 1 AND [ModelID] IS NU"& _ 
+                "LL) OR ([ModelID] = ?)) AND ((? = 1 AND [ArticleID] IS NULL) OR ([ArticleID] = ?"& _ 
+                ")) AND ((? = 1 AND [ArtSize] IS NULL) OR ([ArtSize] = ?)) AND ((? = 1 AND [Suppl"& _ 
+                "ier] IS NULL) OR ([Supplier] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([Ent"& _ 
+                "ryDate] = ?)) AND ((? = 1 AND [ipaddress] IS NULL) OR ([ipaddress] = ?)) AND ((?"& _ 
+                " = 1 AND [ArticleCode] IS NULL) OR ([ArticleCode] = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("InspectionID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "InspectionID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Shift", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Shift", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -7443,11 +7590,12 @@ Namespace MSDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ClientID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ClientID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleID", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArtSize", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Supplier", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Supplier", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_InspectionID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "InspectionID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_InspectionID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "InspectionID", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -7470,7 +7618,7 @@ Namespace MSDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ModelID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ModelID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleID", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArtSize", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArtSize", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArtSize", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Supplier", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Supplier", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -7479,6 +7627,8 @@ Namespace MSDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ipaddress", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ipaddress", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleCode", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7494,7 +7644,9 @@ Namespace MSDSTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        tbl_Inspection_H.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Inspection_H"
+            Me._commandCollection(0).CommandText = "SELECT        TID, InspectionID, Shift, OrderQty, BatchQty, LineID, PO, POM, POD,"& _ 
+                " ClientID, ModelID, ArticleID, ArtSize, Supplier, EntryDate, ipaddress, ArticleC"& _ 
+                "ode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Inspection_H"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7566,11 +7718,12 @@ Namespace MSDSTableAdapters
                     ByVal Original_POD As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ClientID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ModelID As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_ArticleID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_ArticleID As String,  _
                     ByVal Original_ArtSize As String,  _
                     ByVal Original_Supplier As String,  _
                     ByVal Original_EntryDate As String,  _
-                    ByVal Original_ipaddress As String) As Integer
+                    ByVal Original_ipaddress As String,  _
+                    ByVal Original_ArticleCode As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_TID,Integer)
             If (Original_InspectionID.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -7642,12 +7795,12 @@ Namespace MSDSTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
-            If (Original_ArticleID.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_ArticleID.Value,Integer)
-            Else
+            If (Original_ArticleID Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_ArticleID,String)
             End If
             If (Original_ArtSize Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
@@ -7677,6 +7830,13 @@ Namespace MSDSTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_ipaddress,String)
             End If
+            If (Original_ArticleCode Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_ArticleCode,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7696,7 +7856,23 @@ Namespace MSDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal InspectionID As Global.System.Nullable(Of Integer), ByVal Shift As String, ByVal OrderQty As Global.System.Nullable(Of Decimal), ByVal BatchQty As Global.System.Nullable(Of Decimal), ByVal LineID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal ClientID As Global.System.Nullable(Of Integer), ByVal ModelID As Global.System.Nullable(Of Integer), ByVal ArticleID As Global.System.Nullable(Of Integer), ByVal ArtSize As String, ByVal Supplier As String, ByVal EntryDate As String, ByVal ipaddress As String) As Integer
+        Public Overloads Overridable Function Insert( _
+                    ByVal InspectionID As Global.System.Nullable(Of Integer),  _
+                    ByVal Shift As String,  _
+                    ByVal OrderQty As Global.System.Nullable(Of Decimal),  _
+                    ByVal BatchQty As Global.System.Nullable(Of Decimal),  _
+                    ByVal LineID As Global.System.Nullable(Of Integer),  _
+                    ByVal PO As Global.System.Nullable(Of Integer),  _
+                    ByVal POM As Global.System.Nullable(Of Integer),  _
+                    ByVal POD As Global.System.Nullable(Of Integer),  _
+                    ByVal ClientID As Global.System.Nullable(Of Integer),  _
+                    ByVal ModelID As Global.System.Nullable(Of Integer),  _
+                    ByVal ArticleID As String,  _
+                    ByVal ArtSize As String,  _
+                    ByVal Supplier As String,  _
+                    ByVal EntryDate As String,  _
+                    ByVal ipaddress As String,  _
+                    ByVal ArticleCode As String) As Integer
             If (InspectionID.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(InspectionID.Value,Integer)
             Else
@@ -7747,10 +7923,10 @@ Namespace MSDSTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (ArticleID.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(ArticleID.Value,Integer)
-            Else
+            If (ArticleID Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(ArticleID,String)
             End If
             If (ArtSize Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
@@ -7771,6 +7947,11 @@ Namespace MSDSTableAdapters
                 Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(14).Value = CType(ipaddress,String)
+            End If
+            If (ArticleCode Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(ArticleCode,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7802,11 +7983,12 @@ Namespace MSDSTableAdapters
                     ByVal POD As Global.System.Nullable(Of Integer),  _
                     ByVal ClientID As Global.System.Nullable(Of Integer),  _
                     ByVal ModelID As Global.System.Nullable(Of Integer),  _
-                    ByVal ArticleID As Global.System.Nullable(Of Integer),  _
+                    ByVal ArticleID As String,  _
                     ByVal ArtSize As String,  _
                     ByVal Supplier As String,  _
                     ByVal EntryDate As String,  _
                     ByVal ipaddress As String,  _
+                    ByVal ArticleCode As String,  _
                     ByVal Original_TID As Integer,  _
                     ByVal Original_InspectionID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Shift As String,  _
@@ -7818,11 +8000,12 @@ Namespace MSDSTableAdapters
                     ByVal Original_POD As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ClientID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ModelID As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_ArticleID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_ArticleID As String,  _
                     ByVal Original_ArtSize As String,  _
                     ByVal Original_Supplier As String,  _
                     ByVal Original_EntryDate As String,  _
-                    ByVal Original_ipaddress As String) As Integer
+                    ByVal Original_ipaddress As String,  _
+                    ByVal Original_ArticleCode As String) As Integer
             If (InspectionID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(InspectionID.Value,Integer)
             Else
@@ -7873,10 +8056,10 @@ Namespace MSDSTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (ArticleID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(ArticleID.Value,Integer)
-            Else
+            If (ArticleID Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(ArticleID,String)
             End If
             If (ArtSize Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
@@ -7898,111 +8081,123 @@ Namespace MSDSTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(ipaddress,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_TID,Integer)
-            If (Original_InspectionID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_InspectionID.Value,Integer)
+            If (ArticleCode Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(ArticleCode,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_TID,Integer)
+            If (Original_InspectionID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_InspectionID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
             If (Original_Shift Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Shift,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Shift,String)
             End If
             If (Original_OrderQty.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_OrderQty.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_OrderQty.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             If (Original_BatchQty.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_BatchQty.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_BatchQty.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             If (Original_LineID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_LineID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_LineID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
             If (Original_PO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_PO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_PO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
             If (Original_POM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_POM.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_POM.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             End If
             If (Original_POD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_POD.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_POD.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
             End If
             If (Original_ClientID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_ClientID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_ClientID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
             If (Original_ModelID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_ModelID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_ModelID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
-            If (Original_ArticleID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_ArticleID.Value,Integer)
+            If (Original_ArticleID Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_ArticleID,String)
             End If
             If (Original_ArtSize Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_ArtSize,String)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_ArtSize,String)
             End If
             If (Original_Supplier Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_Supplier,String)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_Supplier,String)
             End If
             If (Original_EntryDate Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_EntryDate,String)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_EntryDate,String)
             End If
             If (Original_ipaddress Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_ipaddress,String)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_ipaddress,String)
+            End If
+            If (Original_ArticleCode Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_ArticleCode,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -8157,6 +8352,7 @@ Namespace MSDSTableAdapters
             tableMapping.ColumnMappings.Add("Metal_Detection", "Metal_Detection")
             tableMapping.ColumnMappings.Add("EntryDate", "EntryDate")
             tableMapping.ColumnMappings.Add("Ipaddress", "Ipaddress")
+            tableMapping.ColumnMappings.Add("ArticleCode", "ArticleCode")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -8167,7 +8363,8 @@ Namespace MSDSTableAdapters
                 "rs] = ?)) AND ((? = 1 AND [Sealing_Sample] IS NULL) OR ([Sealing_Sample] = ?)) A"& _ 
                 "ND ((? = 1 AND [Metal_Detection] IS NULL) OR ([Metal_Detection] = ?)) AND ((? = "& _ 
                 "1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ((? = 1 AND [Ipaddress] IS "& _ 
-                "NULL) OR ([Ipaddress] = ?)))"
+                "NULL) OR ([Ipaddress] = ?)) AND ((? = 1 AND [ArticleCode] IS NULL) OR ([ArticleC"& _ 
+                "ode] = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_DID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -8188,11 +8385,13 @@ Namespace MSDSTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Ipaddress", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_Ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleCode", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Inspection_D] ([TID], [ProcessID], [DefectID], [Quantity], [Para"& _ 
-                "meters], [Sealing_Sample], [Metal_Detection], [EntryDate], [Ipaddress]) VALUES ("& _ 
-                "?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "meters], [Sealing_Sample], [Metal_Detection], [EntryDate], [Ipaddress], [Article"& _ 
+                "Code]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8203,18 +8402,20 @@ Namespace MSDSTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Metal_Detection", Global.System.Data.Odbc.OdbcType.Bit, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metal_Detection", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Inspection_D] SET [TID] = ?, [ProcessID] = ?, [DefectID] = ?, [Quanti"& _ 
                 "ty] = ?, [Parameters] = ?, [Sealing_Sample] = ?, [Metal_Detection] = ?, [EntryDa"& _ 
-                "te] = ?, [Ipaddress] = ? WHERE (([DID] = ?) AND ((? = 1 AND [TID] IS NULL) OR (["& _ 
-                "TID] = ?)) AND ((? = 1 AND [ProcessID] IS NULL) OR ([ProcessID] = ?)) AND ((? = "& _ 
-                "1 AND [DefectID] IS NULL) OR ([DefectID] = ?)) AND ((? = 1 AND [Quantity] IS NUL"& _ 
-                "L) OR ([Quantity] = ?)) AND ((? = 1 AND [Parameters] IS NULL) OR ([Parameters] ="& _ 
-                " ?)) AND ((? = 1 AND [Sealing_Sample] IS NULL) OR ([Sealing_Sample] = ?)) AND (("& _ 
-                "? = 1 AND [Metal_Detection] IS NULL) OR ([Metal_Detection] = ?)) AND ((? = 1 AND"& _ 
-                " [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ((? = 1 AND [Ipaddress] IS NULL)"& _ 
-                " OR ([Ipaddress] = ?)))"
+                "te] = ?, [Ipaddress] = ?, [ArticleCode] = ? WHERE (([DID] = ?) AND ((? = 1 AND ["& _ 
+                "TID] IS NULL) OR ([TID] = ?)) AND ((? = 1 AND [ProcessID] IS NULL) OR ([ProcessI"& _ 
+                "D] = ?)) AND ((? = 1 AND [DefectID] IS NULL) OR ([DefectID] = ?)) AND ((? = 1 AN"& _ 
+                "D [Quantity] IS NULL) OR ([Quantity] = ?)) AND ((? = 1 AND [Parameters] IS NULL)"& _ 
+                " OR ([Parameters] = ?)) AND ((? = 1 AND [Sealing_Sample] IS NULL) OR ([Sealing_S"& _ 
+                "ample] = ?)) AND ((? = 1 AND [Metal_Detection] IS NULL) OR ([Metal_Detection] = "& _ 
+                "?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ((? = 1 AND ["& _ 
+                "Ipaddress] IS NULL) OR ([Ipaddress] = ?)) AND ((? = 1 AND [ArticleCode] IS NULL)"& _ 
+                " OR ([ArticleCode] = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ProcessID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ProcessID", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -8225,6 +8426,7 @@ Namespace MSDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Metal_Detection", Global.System.Data.Odbc.OdbcType.Bit, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Metal_Detection", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_DID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -8244,6 +8446,8 @@ Namespace MSDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_Ipaddress", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_Ipaddress", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ipaddress", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_ArticleCode", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ArticleCode", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ArticleCode", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8259,7 +8463,9 @@ Namespace MSDSTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        tbl_Inspection_D.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Inspection_D"
+            Me._commandCollection(0).CommandText = "SELECT        DID, TID, ProcessID, DefectID, Quantity, Parameters, Sealing_Sample"& _ 
+                ", Metal_Detection, EntryDate, Ipaddress, ArticleCode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Inspec"& _ 
+                "tion_D"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8319,7 +8525,7 @@ Namespace MSDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_DID As Integer, ByVal Original_TID As Global.System.Nullable(Of Integer), ByVal Original_ProcessID As Global.System.Nullable(Of Integer), ByVal Original_DefectID As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Decimal), ByVal Original_Parameters As Global.System.Nullable(Of Boolean), ByVal Original_Sealing_Sample As Global.System.Nullable(Of Boolean), ByVal Original_Metal_Detection As Global.System.Nullable(Of Boolean), ByVal Original_EntryDate As String, ByVal Original_Ipaddress As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_DID As Integer, ByVal Original_TID As Global.System.Nullable(Of Integer), ByVal Original_ProcessID As Global.System.Nullable(Of Integer), ByVal Original_DefectID As Global.System.Nullable(Of Integer), ByVal Original_Quantity As Global.System.Nullable(Of Decimal), ByVal Original_Parameters As Global.System.Nullable(Of Boolean), ByVal Original_Sealing_Sample As Global.System.Nullable(Of Boolean), ByVal Original_Metal_Detection As Global.System.Nullable(Of Boolean), ByVal Original_EntryDate As String, ByVal Original_Ipaddress As String, ByVal Original_ArticleCode As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_DID,Integer)
             If (Original_TID.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -8384,6 +8590,13 @@ Namespace MSDSTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Ipaddress,String)
             End If
+            If (Original_ArticleCode Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_ArticleCode,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8403,7 +8616,7 @@ Namespace MSDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal TID As Global.System.Nullable(Of Integer), ByVal ProcessID As Global.System.Nullable(Of Integer), ByVal DefectID As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Decimal), ByVal Parameters As Global.System.Nullable(Of Boolean), ByVal Sealing_Sample As Global.System.Nullable(Of Boolean), ByVal Metal_Detection As Global.System.Nullable(Of Boolean), ByVal EntryDate As String, ByVal Ipaddress As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal TID As Global.System.Nullable(Of Integer), ByVal ProcessID As Global.System.Nullable(Of Integer), ByVal DefectID As Global.System.Nullable(Of Integer), ByVal Quantity As Global.System.Nullable(Of Decimal), ByVal Parameters As Global.System.Nullable(Of Boolean), ByVal Sealing_Sample As Global.System.Nullable(Of Boolean), ByVal Metal_Detection As Global.System.Nullable(Of Boolean), ByVal EntryDate As String, ByVal Ipaddress As String, ByVal ArticleCode As String) As Integer
             If (TID.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(TID.Value,Integer)
             Else
@@ -8449,6 +8662,11 @@ Namespace MSDSTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(8).Value = CType(Ipaddress,String)
             End If
+            If (ArticleCode Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(ArticleCode,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8478,6 +8696,7 @@ Namespace MSDSTableAdapters
                     ByVal Metal_Detection As Global.System.Nullable(Of Boolean),  _
                     ByVal EntryDate As String,  _
                     ByVal Ipaddress As String,  _
+                    ByVal ArticleCode As String,  _
                     ByVal Original_DID As Integer,  _
                     ByVal Original_TID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_ProcessID As Global.System.Nullable(Of Integer),  _
@@ -8487,7 +8706,8 @@ Namespace MSDSTableAdapters
                     ByVal Original_Sealing_Sample As Global.System.Nullable(Of Boolean),  _
                     ByVal Original_Metal_Detection As Global.System.Nullable(Of Boolean),  _
                     ByVal Original_EntryDate As String,  _
-                    ByVal Original_Ipaddress As String) As Integer
+                    ByVal Original_Ipaddress As String,  _
+                    ByVal Original_ArticleCode As String) As Integer
             If (TID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(TID.Value,Integer)
             Else
@@ -8533,69 +8753,81 @@ Namespace MSDSTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Ipaddress,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_DID,Integer)
-            If (Original_TID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_TID.Value,Integer)
+            If (ArticleCode Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(ArticleCode,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_DID,Integer)
+            If (Original_TID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_TID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
             If (Original_ProcessID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_ProcessID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_ProcessID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
             If (Original_DefectID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_DefectID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_DefectID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
             If (Original_Quantity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Quantity.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Quantity.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
             If (Original_Parameters.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Parameters.Value,Boolean)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Parameters.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
             If (Original_Sealing_Sample.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Sealing_Sample.Value,Boolean)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Sealing_Sample.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             If (Original_Metal_Detection.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Metal_Detection.Value,Boolean)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Metal_Detection.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             If (Original_EntryDate Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_EntryDate,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_EntryDate,String)
             End If
             If (Original_Ipaddress Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Ipaddress,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Ipaddress,String)
+            End If
+            If (Original_ArticleCode Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_ArticleCode,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
